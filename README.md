@@ -26,14 +26,34 @@ This plugin is developed and maintained by [FriendsOfBotble](https://github.com/
 
 ## Configuration
 
-Available settings:
+Navigate to **Admin Panel → E-commerce → Facebook Catalog Feed** to access the settings page.
 
-- **Enable/Disable**: Toggle the feed generation
-- **Include out of stock products**: Choose whether to include products with zero stock
-- **Include variations**: List product variations as separate feed items
-- **Default brand**: Fallback brand name when products don't have a brand
-- **Product condition**: Default condition (new, refurbished, used)
-- **Availability texts**: Customize availability status messages
+### Settings Page Overview
+
+The settings page is organized into several sections for easy configuration:
+
+#### 1. General Settings
+- **Enable/Disable**: Toggle the feed generation on/off. When disabled, the feed URL will return a 404 error.
+
+#### 2. Product Selection
+- **Include out of stock products**: Choose whether to include products with zero stock in the feed
+- **Include variations**: List product variations as separate feed items. When enabled, each variation (size, color, etc.) appears as a separate item
+
+#### 3. Product Attributes
+- **Default brand**: Fallback brand name when products don't have a brand assigned (e.g., "Your Store Name")
+- **Product condition**: Default condition for all products (new, refurbished, or used)
+
+#### 4. Availability Settings
+- **In-stock availability text**: Choose from "in stock", "available for order", or "preorder"
+- **Out-of-stock availability text**: Choose from "out of stock" or "discontinued"
+
+### Settings Page Features
+
+The settings page includes:
+- **Feed URL Display**: Easy access to copy your main feed URL
+- **Feed Type Examples**: Quick reference for different feed types (all, new, featured, on sale)
+- **Quick Setup Guide**: Step-by-step instructions for Facebook Commerce Manager integration
+- **Copy to Clipboard**: One-click copying of feed URLs
 
 ## Feed URLs
 

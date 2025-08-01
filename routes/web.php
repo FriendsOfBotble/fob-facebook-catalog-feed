@@ -9,8 +9,20 @@ Route::prefix('facebook-catalog-feed')->name('facebook-catalog-feed.')->group(fu
 });
 
 AdminHelper::registerRoutes(function () {
-    Route::prefix('ecommerce/facebook-catalog-feed')->name('fob-facebook-catalog-feed.')->group(function () {
-        Route::get('settings', [FacebookCatalogFeedController::class, 'settings'])->name('settings');
-        Route::post('settings', [FacebookCatalogFeedController::class, 'updateSettings'])->name('settings.update');
+    Route::group(['namespace' => 'FriendsOfBotble\FacebookCatalogFeed\Http\Controllers'], function () {
+        Route::group(['prefix' => 'ecommerce'], function () {
+            Route::prefix('settings')->group(function () {
+                Route::get('facebook-catalog-feed', [
+                    'as' => 'fob-facebook-catalog-feed.settings',
+                    'uses' => 'Settings\FacebookCatalogFeedSettingController@edit',
+                ]);
+
+                Route::put('facebook-catalog-feed', [
+                    'as' => 'fob-facebook-catalog-feed.settings.update',
+                    'uses' => 'Settings\FacebookCatalogFeedSettingController@update',
+                    'permission' => 'fob-facebook-catalog-feed.settings',
+                ]);
+            });
+        });
     });
 });
