@@ -42,6 +42,16 @@ Available settings:
 - Featured products: `https://yoursite.com/facebook-catalog-feed/feed.xml?type=featured`
 - On sale products: `https://yoursite.com/facebook-catalog-feed/feed.xml?type=on_sale`
 
+## 🔸 Scheduled Feed URL
+
+Best for automation (e.g., syncing from your site).
+
+1. Host your product feed on your website (e.g., `https://yoursite.com/facebook-catalog-feed/feed.xml`)
+
+2. In Commerce Manager, go to **Data Sources** > **Data Feeds** > **Add Data Feed**
+
+3. Choose **Scheduled Feed**, enter the URL and set frequency (daily is recommended)
+
 ## Feed Format
 
 The feed follows the Google Shopping/Facebook Catalog XML format with these fields:
